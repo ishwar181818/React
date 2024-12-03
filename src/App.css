@@ -1,38 +1,192 @@
-.App {
+/* App.css */
+
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+/* Header */
+.App-header {
+  background-color: #3498db;
+  color: white;
+  padding: 50px 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Adding text animation */
+.animated-text {
+  animation: fadeInUp 2s ease-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Animation for fading in and sliding up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.App-header {
+/* About Section */
+.about-section {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.about-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Education Section */
+.education-section {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #ecf0f1;
+}
+
+.education-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.education-section p {
+  font-size: 1.1em;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 30px 20px;
+}
+
+.skills-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.skills-section ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+.skills-section li {
+  padding-left: 20px;
+}
+
+/* Opportunity Section */
+.opportunity-section {
+  background-color: #ecf0f1;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.opportunity-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.opportunity-section p {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Projects Section */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+}
+
+/* Project card */
+.project-card {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #3498db;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.project-info p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.project-info .btn {
+  text-decoration: none;
+  color: white;
+  background-color: #3498db;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-info .btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
+/* Footer */
+/* App.css */
+
+/* Ensure the footer stays at the bottom */
+footer {
   background-color: #282c34;
-  min-height: 100vh;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.App {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
